@@ -1,7 +1,6 @@
 // components/Navbar.js
-
-import React from "react";
-
+'use client';
+import React, { useEffect, useState } from 'react';
 import {
   Navbar,
   NavbarBrand,
@@ -10,108 +9,91 @@ import {
   NavbarMenuItem,
   NavbarContent,
   NavbarItem,
-  Link,
-} from "@nextui-org/react";
+} from '@nextui-org/react';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function App() {
+  const [activeSection, setActiveSection] = useState('Home');
   const menuItems = [
-    "Home",
-    "What We Do",
-    "Where We Operate",
-    "Innovation",
-    "About",
-    "Meet Our Team",
-    "Contact",
-    "Careers",
-    "Login",
-    "Members",
+    { name: 'Home', href: 'home' },
+    { name: 'What We Do', href: 'what-we-do' },
+    { name: 'Where We Operate', href: 'where-we-operate' },
+    { name: 'Innovation', href: 'innovation' },
+    { name: 'About', href: 'about' },
+    // { name: 'Meet Our Team', href: 'meet-our-team' },
+    // { name: 'Contact', href: 'contact' },
+    // { name: 'Careers', href: 'careers' },
+    // { name: 'Login', href: 'login' },
+    // { name: 'Members', href: 'members' },
   ];
 
+  const handleScroll = () => {
+    const sections = menuItems.map((item) =>
+      document.getElementById(item.href)
+    );
+    const scrollY = window.scrollY;
+
+    sections.forEach((section) => {
+      if (
+        section.offsetTop <= scrollY + 60 &&
+        section.offsetTop + section.offsetHeight > scrollY + 60
+      ) {
+        setActiveSection(section.id);
+      }
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Navbar disableAnimation isBordered className="bg-[#161635] text-white">
+    <Navbar
+      disableAnimation
+      isBordered
+      className="bg-[#161635] text-white h-24 font-serif"
+    >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarBrand>
-          <p className="font-bold text-inherit">XOM</p>
+          <p className="font-bold text-inherit text-3xl">XOM</p>
         </NavbarBrand>
         <NavbarMenuToggle />
       </NavbarContent>
 
- 
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="end">
+      <NavbarContent className="hidden sm:flex gap-4 " justify="end">
         <NavbarBrand>
-          <p className="font-bold text-inherit">XOM</p>
+          <p className="font-bold text-inherit text-3xl">XOM</p>
         </NavbarBrand>
-        <NavbarItem>
-          <Link className="font-bold text-inherit" href="#">
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="font-bold text-inherit" href="#">
-          What We Do
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="font-bold text-inherit" href="#">
-          Innovation
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="font-bold text-inherit" href="#">
-          About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="font-bold text-inherit" href="#">
-          Meet Our Team
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="font-bold text-inherit" href="#">
-          Contact
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link className="font-bold" href="#" aria-current="page" color="warning">
-          Login
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="font-bold text-inherit" href="#">
-          Members
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item) => (
+          <NavbarItem key={item.name} isActive={activeSection === item.href}>
+            <ScrollLink
+              className="font-bold text-inherit text-lg"
+              to={item.href}
+              smooth={true}
+              duration={500}
+              offset={-90} // Adjust this to account for fixed header
+            >
+              {item.name}
+            </ScrollLink>
+          </NavbarItem>
+        ))}
       </NavbarContent>
-      {/* 
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="warning" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent> */}
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
+          <NavbarMenuItem key={`${item.name}-${index}`}>
+            <ScrollLink
               className="w-full"
-              color={
-                index === 2
-                  ? "warning"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
-              href="#"
-              size="lg"
+              to={item.href}
+              smooth={true}
+              duration={500}
+              offset={-90} // Adjust this to account for fixed header
             >
-              {item}
-            </Link>
+              {item.name}
+            </ScrollLink>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

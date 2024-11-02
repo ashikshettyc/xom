@@ -20,7 +20,7 @@ type carosel = {
 
 export function EquipmentGallery({}) {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 5000, stopOnInteraction: true })
   );
 
   const firstCarosel: carosel[] = [
@@ -38,9 +38,24 @@ export function EquipmentGallery({}) {
     },
   ];
 
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Change 768 to your breakpoint
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="flex justify-center">
-      <div className="md:w-8/12 relative">
+      <div className="md:w-10/12 lg:w-8/12 relative">
         <Carousel
           plugins={[plugin.current]}
           className=""
@@ -53,7 +68,7 @@ export function EquipmentGallery({}) {
                 key={item.heading}
                 className="flex justify-center items-center"
               >
-                <div className="p-1 lg:w-[800px] md:w-1/2">
+                <div className="p-1 lg:w-[600px] md:w-1/2">
                   <Card>
                     <CardContent className="flex items-center justify-center flex-col gap-3 p-5">
                       <Image
@@ -68,18 +83,23 @@ export function EquipmentGallery({}) {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <button
-            className="absolute top-1/2 left-2 transform -translate-y-1/2 text-4xl font-bold text-gray-700 z-10"
-            aria-label="Previous Slide"
-          >
-            <CarouselPrevious>&lt;</CarouselPrevious>
-          </button>
-          <button
-            className="absolute top-1/2 right-2 transform -translate-y-1/2 text-4xl font-bold text-gray-700 z-10"
-            aria-label="Next Slide"
-          >
-            <CarouselNext>&gt;</CarouselNext>
-          </button>
+          {/* Conditional rendering of navigation buttons based on screen size */}
+          {!isMobile && (
+            <div
+              className="absolute top-1/2 left-2 transform   text-4xl font-bold text-gray-700 z-10"
+              aria-label="Previous Slide"
+            >
+              <CarouselPrevious>&lt;</CarouselPrevious>
+            </div>
+          )}
+          {!isMobile && (
+            <div
+              className="absolute top-1/2 right-2 transform    text-4xl font-bold text-gray-700 z-10"
+              aria-label="Next Slide"
+            >
+              <CarouselNext>&gt;</CarouselNext>
+            </div>
+          )}
         </Carousel>
       </div>
     </div>

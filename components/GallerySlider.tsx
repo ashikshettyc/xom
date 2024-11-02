@@ -1,7 +1,6 @@
 'use client';
 import * as React from 'react';
 import Autoplay from 'embla-carousel-autoplay';
-
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -11,11 +10,13 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Image from 'next/image';
+
 type carosel = {
   heading: string;
   image: string;
   description: string;
 };
+
 export function CarouselPlugin({}) {
   const plugin = React.useRef(
     Autoplay({ delay: 4000, stopOnInteraction: true })
@@ -31,9 +32,24 @@ export function CarouselPlugin({}) {
       heading: 'FDS Celebrates 7 Years LTI Free ',
       image: '/images/image2.png',
       description:
-        'Falcon Drilling Systems (FDS)  Celebrates another year of LTI Free which marks 7 years in a row without lost time injury',
+        'Falcon Drilling Systems (FDS) Celebrates another year of LTI Free which marks 7 years in a row without lost time injury',
     },
   ];
+
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Change 768 to your breakpoint
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className="flex justify-center">
@@ -62,16 +78,14 @@ export function CarouselPlugin({}) {
                       <p className="font-semibold text-sm text-black md:w-[80%]">
                         {item.description}
                       </p>
-
-                      {/* <span className="text-4xl font-semibold">{index + 1}</span> */}
                     </CardContent>
                   </Card>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          {!isMobile && <CarouselPrevious />}
+          {!isMobile && <CarouselNext />}
         </Carousel>
       </div>
     </div>
