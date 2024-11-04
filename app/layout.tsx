@@ -1,19 +1,18 @@
 /* eslint-disable @next/next/no-sync-scripts */
 /* eslint-disable @next/next/no-css-tags */
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 // import localFont from "next/font/local";
-import "bootstrap/dist/css/bootstrap.css";
-import "./globals.css";
-import { Providers } from "./providers";
-import HeaderComp from "@/components/Header";
-import Footer from "@/components/Footer";
-
+import 'bootstrap/dist/css/bootstrap.css';
+import './globals.css';
+import { Providers } from './providers';
+import HeaderComp from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: "XOM Oman | Oil Field Services",
-  description: "XOM Oman | Oil Field Services",
+  title: 'XOM Oman | Oil Field Services',
+  description: 'XOM Oman | Oil Field Services',
   icons: {
-    icon: "/favicon.png",
+    icon: '/favicon.png',
   },
 };
 

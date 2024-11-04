@@ -1,24 +1,12 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
-"use Client"
+'use Client';
+import { format } from 'date-fns';
 import Image from 'next/image';
-import Script from "next/script"
+import Script from 'next/script';
 const Footer: React.FC = () => {
+  const currentTime = format(new Date(), 'hh:mm:ss a');
   return (
     <>
-       <Script src="/js/vendor/modernizr-3.6.0.min.js" strategy="beforeInteractive" />
-      <Script src="/js/vendor/jquery-3.6.0.min.js" strategy="beforeInteractive" />
-      <Script src="/js/vendor/jquery-migrate-3.3.2.min.js" strategy="beforeInteractive" />
-      <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
-      <Script src="/js/jquery.mCustomScrollbar.concat.min.js" strategy="afterInteractive" />
-      <Script src="/js/jquery.fancybox.js" strategy="afterInteractive" />
-      <Script src="/js/appear.js" strategy="afterInteractive" />
-      <Script src="/js/owl.js" strategy="afterInteractive" />
-      <Script src="/js/wow.js" strategy="afterInteractive" />
-      <Script src="/js/parallax.min.js" strategy="afterInteractive" />
-      <Script src="/js/tilt.jquery.min.js" strategy="afterInteractive" />
-      <Script src="/js/jquery.paroller.min.js" strategy="afterInteractive" />
-      <Script src="/js/jquery-ui.js" strategy="afterInteractive" />
-      <Script src="/js/script.js" strategy="afterInteractive" />
       {/* Main Footer */}
       <footer className="main-footer" id="contact">
         <div className="auto-container">
@@ -43,8 +31,12 @@ const Footer: React.FC = () => {
                       </div>
                       <div className="call">
                         Call us directly
-                        <a className="phone" href="tel:+96824621546">+968 24621546</a>
-                        <a className="phone" href="tel:+96824625907">+968 24625907</a>
+                        <a className="phone" href="tel:+96824621546">
+                          +968 24621546
+                        </a>
+                        <a className="phone" href="tel:+96824625907">
+                          +968 24625907
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -54,11 +46,21 @@ const Footer: React.FC = () => {
                     <div className="footer-widget links-widget">
                       <h5>Company</h5>
                       <ul className="list-link">
-                        <li><a href="#intro">Home</a></li>
-                        <li><a href="#what_we_do">What We Do</a></li>
-                        <li><a href="#where_we_operate">Where We Operate</a></li>
-                        <li><a href="#innovation">Innovation</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li>
+                          <a href="#intro">Home</a>
+                        </li>
+                        <li>
+                          <a href="#what_we_do">What We Do</a>
+                        </li>
+                        <li>
+                          <a href="#where_we_operate">Where We Operate</a>
+                        </li>
+                        <li>
+                          <a href="#innovation">Innovation</a>
+                        </li>
+                        <li>
+                          <a href="#contact">Contact</a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -74,7 +76,9 @@ const Footer: React.FC = () => {
                       <h5>Address</h5>
                       <p>
                         P.O Box 2467. PC 133 Al Khuwair <br />
-                        Location: Aqar office 1991,<br /> Al Khuwair,<br /> Third floor office no 315
+                        Location: Aqar office 1991,
+                        <br /> Al Khuwair,
+                        <br /> Third floor office no 315
                       </p>
                     </div>
                   </div>
@@ -83,13 +87,24 @@ const Footer: React.FC = () => {
                   <div className="footer-column col-lg-6 col-md-6 col-sm-12">
                     <div className="footer-widget newsletter-widget">
                       <h5>Our Newsletter</h5>
-                      <div className="text">Subscribe to our newsletter and we will inform you about the latest updates and offers.</div>
+                      <div className="text">
+                        Subscribe to our newsletter and we will inform you about
+                        the latest updates and offers.
+                      </div>
                       {/* Newsletter Form */}
                       <div className="newsletter-form">
                         <form method="post" action="/">
                           <div className="form-group">
-                            <input type="email" name="email" placeholder="Email Address..." required />
-                            <button type="submit" className="theme-btn icofont-arrow-right"></button>
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="Email Address..."
+                              required
+                            />
+                            <button
+                              type="submit"
+                              className="theme-btn icofont-arrow-right"
+                            ></button>
                           </div>
                         </form>
                       </div>
@@ -107,7 +122,15 @@ const Footer: React.FC = () => {
                 <div className="row clearfix">
                   <div className="col-lg-8 col-md-12 col-sm-12">
                     <div className="copyright">
-                      Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | Developed by <a href="https://www.csloman.com/" target="_blank" rel="noopener noreferrer">Concept Solutions LLC</a>
+                      Copyright ©{currentTime}
+                      All rights reserved | Developed by{' '}
+                      <a
+                        href="https://www.csloman.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Concept Solutions LLC
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -120,16 +143,50 @@ const Footer: React.FC = () => {
 
       {/* Search Popup */}
       <div className="search-popup">
-        <button className="close-search style-two"><span className="icofont-brand-nexus"></span></button>
-        <button className="close-search"><span className="icofont-arrow-up"></span></button>
+        <button className="close-search style-two">
+          <span className="icofont-brand-nexus"></span>
+        </button>
+        <button className="close-search">
+          <span className="icofont-arrow-up"></span>
+        </button>
         <form method="post" action="/">
           <div className="form-group">
-            <input type="search" name="search-field" placeholder="Search Here" required />
-            <button type="submit"><i className="fa fa-search"></i></button>
+            <input
+              type="search"
+              name="search-field"
+              placeholder="Search Here"
+              required
+            />
+            <button type="submit">
+              <i className="fa fa-search"></i>
+            </button>
           </div>
         </form>
       </div>
       {/* End Header Search */}
+      <Script src="/js/vendor/modernizr-3.6.0.min.js" strategy="lazyOnload" />
+      <Script
+        src="/js/vendor/jquery-3.6.0.min.js"
+        strategy="beforeInteractive"
+      />
+      <Script
+        src="/js/vendor/jquery-migrate-3.3.2.min.js"
+        strategy="beforeInteractive"
+      />
+      <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
+      <Script
+        src="/js/jquery.mCustomScrollbar.concat.min.js"
+        strategy="afterInteractive"
+      />
+      <Script src="/js/jquery.fancybox.js" strategy="afterInteractive" />
+      <Script src="/js/appear.js" strategy="afterInteractive" />
+      <Script src="/js/owl.js" strategy="afterInteractive" />
+      <Script src="/js/wow.js" strategy="afterInteractive" />
+      <Script src="/js/parallax.min.js" strategy="afterInteractive" />
+      <Script src="/js/tilt.jquery.min.js" strategy="afterInteractive" />
+      <Script src="/js/jquery.paroller.min.js" strategy="afterInteractive" />
+      <Script src="/js/jquery-ui.js" strategy="afterInteractive" />
+      <Script src="/js/script.js" strategy="afterInteractive" />
     </>
   );
 };
