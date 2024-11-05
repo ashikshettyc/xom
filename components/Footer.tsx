@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
 const Footer: React.FC = () => {
-  const currentTime = format(new Date(), 'hh:mm:ss a');
+  const currentYear = format(new Date(), 'yyyy');
+
   return (
     <>
       {/* Main Footer */}
@@ -25,8 +26,8 @@ const Footer: React.FC = () => {
                           <Image
                             src="/images/logo.png"
                             alt="Logo"
-                            width={80} 
-                            height={80} 
+                            width={80}
+                            height={80}
                           />
                         </a>
                       </div>
@@ -64,7 +65,7 @@ const Footer: React.FC = () => {
                         </li>
                         <li>
                           <Link href="contact-us">Contact</Link>
-                        </li>                        
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -81,7 +82,6 @@ const Footer: React.FC = () => {
                       <p>
                         P.O Box 2467. PC 133 Al Khuwair <br />
                         Location: Aqar office 1991,
-                        <br /> Al Khuwair,
                         <br /> Third floor office no 315
                       </p>
                     </div>
@@ -125,16 +125,19 @@ const Footer: React.FC = () => {
               <div className="bottom-inner">
                 <div className="row clearfix">
                   <div className="col-lg-8 col-md-12 col-sm-12">
-                    <div className="copyright">
-                      Copyright ©{currentTime}
-                      All rights reserved | Developed by{' '}
-                      <a
+                    <div className="copyright ">
+                      Copyright ©{currentYear} All rights reserved | Developed
+                      by{' '}
+                      <Link
+                        className="text-[#666666]"
                         href="https://www.csloman.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Concept Solutions LLC
-                      </a>
+                        <span className="font-normal text-[#666666]">
+                          Concept Solutions LLC
+                        </span>
+                      </Link>
                     </div>
                   </div>
                 </div>

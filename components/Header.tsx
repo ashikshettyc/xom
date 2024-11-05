@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React from "react";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import React from 'react';
 export default function HeaderComp() {
   const pathname = usePathname();
 
   return (
     <>
-      <header className={`main-header ${pathname !== "/" && "style-two"}`}>
+      <header className={`main-header ${pathname !== '/' && 'style-two'}`}>
         {/* Header Top */}
         <div className="header-top">
           <div className="auto-container">
@@ -36,7 +36,7 @@ export default function HeaderComp() {
               <div className="top-right pull-right">
                 <ul className="info-list">
                   <li>
-                    <a href="contact.html">
+                    <a href="contact">
                       <span className="icon icofont-location-pin"></span> P.O
                       Box 2467 . PC 133 Al Khuwair
                     </a>
@@ -53,7 +53,13 @@ export default function HeaderComp() {
             <div className="inner-container clearfix">
               <div className="pull-left logo-box">
                 <div className="logo">
-                  <Link href={`${pathname === "/about-us" ? "/" : "/"}`}>
+                  <Link
+                    href={`${
+                      pathname === '/about-us' || pathname === '/contact-us'
+                        ? '/'
+                        : '/'
+                    }`}
+                  >
                     <Image
                       src="/images/logo.webp"
                       width={153}
@@ -90,12 +96,15 @@ export default function HeaderComp() {
                   >
                     <ul className="navigation clearfix">
                       <li className="current">
-                        <a href="/">Home</a>
+                        <Link href="/">Home</Link>
                       </li>
                       <li>
                         <Link
                           href={`${
-                            pathname === "/about-us" ? "/" : "#what_we_do"
+                            pathname === '/about-us' ||
+                            pathname === '/contact-us'
+                              ? '/'
+                              : '#what_we_do'
                           }`}
                         >
                           What We Do
@@ -104,7 +113,10 @@ export default function HeaderComp() {
                       <li>
                         <Link
                           href={`${
-                            pathname === "/about-us" ? "/" : "#where_we_operate"
+                            pathname === '/about-us' ||
+                            pathname === '/contact-us'
+                              ? '/'
+                              : '#where_we_operate'
                           }`}
                         >
                           Where We Operate
@@ -146,7 +158,7 @@ export default function HeaderComp() {
 
           <nav className="menu-box">
             <div className="nav-logo">
-              <a href="#intro">
+              <Link href="#intro">
                 <Image
                   src="/images/logo.png"
                   alt=""
@@ -154,7 +166,7 @@ export default function HeaderComp() {
                   height={80}
                   title=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="menu-outer">
               {/* Here Menu Will Come Automatically Via Javascript / Same Menu as in Header */}

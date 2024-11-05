@@ -1,12 +1,12 @@
-import { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { Metadata } from 'next';
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
 export const generateMetadata = (): Metadata => {
   return {
-    title: "About Us | XOM Oman | Oil Field Services",
+    title: 'About Us | XOM Oman | Oil Field Services',
     description:
-      "Learn more about XOM Oman and our expertise in oil field services.",
+      'Learn more about XOM Oman and our expertise in oil field services.',
   };
 };
 function page() {
@@ -17,10 +17,10 @@ function page() {
           className="page-title d-flex align-items-center justify-content-center"
           style={{
             backgroundImage: "url('/images/oilRig.webp')",
-            height: "60vh",
-            width: "100%",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
+            height: '60vh',
+            width: '100%',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
           }}
         >
           <div className="container  text-white text-2xl pt-1/2">
@@ -33,7 +33,7 @@ function page() {
                   </Link>
                 </li>
                 <li
-                  className="breadcrumb-item text-[#198754] "
+                  className="breadcrumb-item text-greenish "
                   aria-current="page"
                 >
                   About Us
@@ -45,7 +45,7 @@ function page() {
         </div>
       </section>
       {/* <!-- About Section --> */}
-      <div className="about-section lg:mb-16" id="about" >
+      <div className="about-section lg:mb-16" id="about">
         <div className="auto-container">
           <div className="">
             <div className="row align-items-center clearfix">
@@ -67,7 +67,8 @@ function page() {
                   <div className="sec-title">
                     <div className="title">about XOM</div>
                     <h2>
-                    Driven by the <span>Belief</span> that Everyone Can<span> Thrive</span>
+                      Driven by the <span>Belief</span> that Everyone Can
+                      <span> Thrive</span>
                     </h2>
                   </div>
                   <div className="text">
@@ -344,7 +345,7 @@ function page() {
                         We’re more than just experts; we’re partners in your
                         journey to success. From strategy to execution, we
                         support your goals with informed guidance and practical
-                        solutions.{" "}
+                        solutions.{' '}
                       </div>
                     </div>
                   </div>

@@ -2515,7 +2515,7 @@ img{
 	position:relative;
 	border-radius:3px;
 	overflow:hidden;
-	background-color:#025656;
+	/* background-color:#025656; */
 }
 
 .team-block .inner-box .image img{
@@ -2531,7 +2531,7 @@ img{
 }
 
 .team-block .inner-box:hover .image img{
-	opacity:0.7;
+	/* opacity:0.7; */
 	transform:scale(1.05,1.05);
 }
 
