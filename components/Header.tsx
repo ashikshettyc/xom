@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
-'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React from 'react';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React from "react";
 export default function HeaderComp() {
   const pathname = usePathname();
 
   return (
     <>
-      <header className={`main-header ${pathname !== '/' && 'style-two'}`}>
+      <header className={`main-header ${pathname !== "/" && "style-two"}`}>
         {/* Header Top */}
         <div className="header-top">
           <div className="auto-container">
@@ -53,7 +53,7 @@ export default function HeaderComp() {
             <div className="inner-container clearfix">
               <div className="pull-left logo-box">
                 <div className="logo">
-                  <a href={`${pathname === '/about-us' ? '/' : '/#intro'}`}>
+                  <Link href={`${pathname === "/about-us" ? "/" : "/"}`}>
                     <Image
                       src="/images/logo.webp"
                       width={153}
@@ -61,7 +61,7 @@ export default function HeaderComp() {
                       alt="XOM Oman"
                       title=""
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -95,7 +95,7 @@ export default function HeaderComp() {
                       <li>
                         <Link
                           href={`${
-                            pathname === '/about-us' ? '/' : '#what_we_do'
+                            pathname === "/about-us" ? "/" : "#what_we_do"
                           }`}
                         >
                           What We Do
@@ -104,7 +104,7 @@ export default function HeaderComp() {
                       <li>
                         <Link
                           href={`${
-                            pathname === '/about-us' ? '/' : '#where_we_operate'
+                            pathname === "/about-us" ? "/" : "#where_we_operate"
                           }`}
                         >
                           Where We Operate
@@ -114,13 +114,7 @@ export default function HeaderComp() {
                         <Link href="about-us">About</Link>
                       </li>
                       <li>
-                        <Link
-                          href={`${
-                            pathname === '/about-us' ? '/' : '#contact'
-                          }`}
-                        >
-                          Contact
-                        </Link>
+                        <Link href="contact-us">Contact</Link>
                       </li>
                     </ul>
                   </div>

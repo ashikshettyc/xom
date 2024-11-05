@@ -8,8 +8,8 @@ function HeroSection() {
     <>
       {/* // Banner Section */}
       <div className="banner-section" id="intro">
-        <div className="main-slider-carousel owl-carousel owl-theme">
-          <div className="slide" data-bg-image="images/main-slider/intro-1.jpg">
+        <div className="">
+          <div className="" data-bg-image="images/main-slider/intro-1.jpg">
             <div className="auto-container w-100">
               <div className="row clearfix">
                 {/* Content Column */}
@@ -231,7 +231,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
-
+    
       {/* Testimonial Section */}
       <div className="testimonial-section">
         <div className="auto-container">
@@ -245,6 +245,7 @@ function HeroSection() {
         </div>
       </div>
       {/* End Testimonial Section */}
+     
 
       {/* Sponsors Section */}
       <div className="sponsors-section">

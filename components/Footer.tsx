@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-before-interactive-script-outside-document */
-'use Client';
+
 import { format } from 'date-fns';
 import Image from 'next/image';
+import Link from 'next/link';
 import Script from 'next/script';
 const Footer: React.FC = () => {
   const currentTime = format(new Date(), 'hh:mm:ss a');
@@ -24,8 +25,8 @@ const Footer: React.FC = () => {
                           <Image
                             src="/images/logo.png"
                             alt="Logo"
-                            width={80} // Specify the width
-                            height={80} // Specify the height
+                            width={80} 
+                            height={80} 
                           />
                         </a>
                       </div>
@@ -59,8 +60,11 @@ const Footer: React.FC = () => {
                           <a href="#innovation">Innovation</a>
                         </li>
                         <li>
-                          <a href="#contact">Contact</a>
+                          <Link href="about-us">About Us</Link>
                         </li>
+                        <li>
+                          <Link href="contact-us">Contact</Link>
+                        </li>                        
                       </ul>
                     </div>
                   </div>
@@ -173,14 +177,14 @@ const Footer: React.FC = () => {
         src="/js/vendor/jquery-migrate-3.3.2.min.js"
         strategy="beforeInteractive"
       />
-      <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
+      <Script src="/js/bootstrap.min.js" strategy="beforeInteractive" />
       <Script
         src="/js/jquery.mCustomScrollbar.concat.min.js"
         strategy="afterInteractive"
       />
       <Script src="/js/jquery.fancybox.js" strategy="afterInteractive" />
       <Script src="/js/appear.js" strategy="afterInteractive" />
-      <Script src="/js/owl.js" strategy="afterInteractive" />
+      <Script src="/js/owl.js" strategy="beforeInteractive" />
       <Script src="/js/wow.js" strategy="afterInteractive" />
       <Script src="/js/parallax.min.js" strategy="afterInteractive" />
       <Script src="/js/tilt.jquery.min.js" strategy="afterInteractive" />

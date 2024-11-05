@@ -93,7 +93,7 @@
 			loop:true,
 			margin:0,
 			nav:true,
-			smartSpeed: 500,
+			smartSpeed: 0,
 			autoplay: 6000,
 			autoplayTimeout:700000,
 			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
@@ -350,22 +350,22 @@
 
 	
 	//Contact Form Validation
-	if($('#contact-form').length){
-		$('#contact-form').validate({
-			rules: {
-				phone: {
-					required: true
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				message: {
-					required: true
-				}
-			}
-		});
-	}
+	// if($('#contact-form').length){
+	// 	$('#contact-form').validate({
+	// 		rules: {
+	// 			phone: {
+	// 				required: true
+	// 			},
+	// 			email: {
+	// 				required: true,
+	// 				email: true
+	// 			},
+	// 			message: {
+	// 				required: true
+	// 			}
+	// 		}
+	// 	});
+	// }
 	
 	
 	

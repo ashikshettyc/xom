@@ -55,7 +55,16 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		  keyframes: {
+			'slide-left': {
+			  from: { transform: 'translateX(0)' },
+			  to: { transform: 'translateX(-100%)' },
+			},
+		  },
+		  animation: {
+			'slide-left': 'slide-left 8s linear infinite',
+		  },
   	}
   },
   darkMode: ["class", "class"],

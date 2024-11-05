@@ -29,7 +29,7 @@ export default function RootLayout({
         <meta property="og:title" content="XOM Oman | Oil Field Services" />
         <meta property="og:url" content="https://www.xomoman.com/" />
         <meta property="og:site_name" content="XOM" />
-        <meta property="og:image" content="images/og_image.webp" />
+        <meta property="og:image" content="https://www.xomoman.com/images/og_image.webp" />
         <meta
           property="og:description"
           content="XOM Oman | Oil Field Services"
@@ -47,9 +47,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
 
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/main.css" rel="stylesheet" />
-        <link href="css/responsive.css" rel="stylesheet" />
+        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/css/main.css" rel="stylesheet" />
+        <link href="/css/responsive.css" rel="stylesheet" />
       </head>
       <body
       // className={`${geistSans.variable} ${geistMono.variable} antialiased`}

@@ -1,15 +1,5 @@
-
-// import HeroSection from "@/components/homepage/HeroSection";
-
-
-// export default function Home() {
-//   return (
-// <HeroSection/>
-//   );
-// }
-/* eslint-disable @next/next/no-before-interactive-script-outside-document */
-
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Home() {
@@ -43,12 +33,12 @@ export default function Home() {
                       technology companies in Oman.
                     </div>
                     <div className="btn-box">
-                      <a
-                        href="#contact"
+                      <Link
+                        href="contact-us"
                         className="theme-btn btn-style-one"
                       >
-                        <span className="txt">Work With Us</span>
-                      </a>
+                        <span className="txt">Contact Us</span>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -79,7 +69,7 @@ export default function Home() {
             <div className="col-lg-5">
               {/* <!-- CTA Phone Number Start --> */}
               <div className="cta-phone text-lg-end text-strat">
-                <h2 className="title">+968 24621546</h2>
+               <a href="tel:+96824621546"> <h2 className="title">+968 24621546</h2></a>
               </div>
               {/* <!-- CTA Phone Number Start --> */}
             </div>
@@ -203,7 +193,7 @@ export default function Home() {
         </div>
       </div>
       {/* <!-- End Services Section --> */}
-
+     
 
       <div className="project-section" id="where_we_operate">
       <div className="auto-container">
