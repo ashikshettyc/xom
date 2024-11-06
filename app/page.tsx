@@ -46,7 +46,7 @@ export default function Home() {
       </div> */}
 
       {/* <!-- CTA Section Start --> */}
-      <div className="cta-section" data-bg-image="images/background/cta-bg.jpg">
+      <div className="cta-section" data-bg-image="images/background/cta-bg.webp">
         <div className="auto-container">
           <div className="row align-items-center">
             <div className="col-lg-7">

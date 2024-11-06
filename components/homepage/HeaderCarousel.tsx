@@ -27,7 +27,11 @@ export default function HeaderCarosel() {
   return (
     <div className="banner-section" id="intro">
       <div className="main-slider-carousel owl-carousel owl-theme">
-        <div className="slide" data-bg-image="images/main-slider/intro-1.jpg">
+        <div className="slide bg-[url('/images/main-slider/intro-1.webp')]"  
+        // style={{ backgroundImage: 'url("/images/main-slider/intro-1.jpg")'}}
+
+        // data-bg-image="images/main-slider/intro-1.jpg"
+        >
           <div className="auto-container w-100">
             <div className="row clearfix">
               <div className="content-column col-lg-7 col-md-12 col-sm-12">

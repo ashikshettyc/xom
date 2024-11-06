@@ -58,16 +58,34 @@
         Custom script to call Background
         Image & Color from html data attribute
     -----------------------------------*/
-    $('[data-bg-image]').each(function () {
-        var $this = $(this),
-            $image = $this.data('bg-image');
-        $this.css('background-image', 'url(' + $image + ')');
-    });
-    $('[data-bg-color]').each(function () {
-        var $this = $(this),
-            $color = $this.data('bg-color');
-        $this.css('background-color', $color);
-    });
+    // $('[data-bg-image]').each(function () {
+    //     var $this = $(this),
+    //         $image = $this.data('bg-image');
+    //     $this.css('background-image', 'url(' + $image + ')');
+    // });
+    // $('[data-bg-color]').each(function () {
+    //     var $this = $(this),
+    //         $color = $this.data('bg-color');
+    //     $this.css('background-color', $color);
+    // });
+
+	// Optimize background image and color setting
+$('[data-bg-image], [data-bg-color]').each(function () {
+    const $this = $(this);
+    const bgImage = $this.data('bg-image');
+    const bgColor = $this.data('bg-color');
+
+    // Apply background image only if data-bg-image is defined
+    if (bgImage) {
+        $this.css('background-image', `url(${bgImage})`);
+    }
+
+    // Apply background color only if data-bg-color is defined
+    if (bgColor) {
+        $this.css('background-color', bgColor);
+    }
+});
+
 	
 	
 	//Submenu Dropdown Toggle

@@ -175,28 +175,28 @@ const Footer: React.FC = () => {
         </form>
       </div>
       {/* End Header Search */}
-      <Script src="/js/vendor/modernizr-3.6.0.min.js" strategy="lazyOnload" />
+      <Script src="/js/vendor/modernizr-3.6.0.min.js" defer strategy="lazyOnload" />
       <Script
-        src="/js/vendor/jquery-3.6.0.min.js"
+        src="/js/vendor/jquery-3.6.0.min.js" defer
         strategy="beforeInteractive"
       />
       <Script
-        src="/js/vendor/jquery-migrate-3.3.2.min.js"
+        src="/js/vendor/jquery-migrate-3.3.2.min.js" defer
         strategy="beforeInteractive"
       />
-      <Script src="/js/bootstrap.min.js" strategy="beforeInteractive" />
+      <Script src="/js/bootstrap.min.js" defer strategy="beforeInteractive" />
       <Script
-        src="/js/jquery.mCustomScrollbar.concat.min.js"
+        src="/js/jquery.mCustomScrollbar.concat.min.js" defer
         strategy="afterInteractive"
       />
-      <Script src="/js/jquery.fancybox.js" strategy="afterInteractive" />
-      <Script src="/js/appear.js" strategy="afterInteractive" />
-      <Script src="/js/owl.js" strategy="beforeInteractive" />
-      <Script src="/js/wow.js" strategy="afterInteractive" />
-      <Script src="/js/parallax.min.js" strategy="afterInteractive" />
-      <Script src="/js/tilt.jquery.min.js" strategy="afterInteractive" />
-      <Script src="/js/jquery.paroller.min.js" strategy="afterInteractive" />
-      <Script src="/js/jquery-ui.js" strategy="afterInteractive" />
+      {/* <Script src="/js/jquery.fancybox.js" defer strategy="lazyOnload" /> */}
+      <Script src="/js/appear.js" defer strategy="lazyOnload" />
+      <Script src="/js/owl.js" defer strategy="afterInteractive" />
+      <Script src="/js/wow.js" defer strategy="lazyOnload" />
+      <Script src="/js/parallax.min.js" defer strategy="lazyOnload" />
+      <Script src="/js/tilt.jquery.min.js" strategy="lazyOnload" />
+      <Script src="/js/jquery.paroller.min.js" defer strategy="lazyOnload" />
+      {/* <Script src="/js/jquery-ui.js" defer strategy="lazyOnload" /> */}
       <Script src="/js/script.js" strategy="afterInteractive" />
     </>
   );
