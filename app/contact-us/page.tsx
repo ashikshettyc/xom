@@ -69,20 +69,20 @@ function page() {
 
                     <div className="flex flex-col">
                       <span className="font-medium text-2xl">Phone:</span>
-                      <div><a
-                        href="tel:+96824625907"
-                        className="text-white text-lg"
-                      >
-                        +968 24625907 / </a>
+                      <div>
                         <a
-                        href="tel:+96824621546"
-                        className="text-white text-lg"
-                      >
-                       24621546
-                      </a></div>
-                      
-                      
-                     
+                          href="tel:+96824625907"
+                          className="text-white text-lg"
+                        >
+                          +968 24625907 /{" "}
+                        </a>
+                        <a
+                          href="tel:+96824621546"
+                          className="text-white text-lg"
+                        >
+                          24621546
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -108,11 +108,11 @@ function page() {
                 {/* Address Section */}
                 <div className="flex items-center gap-4">
                   <div className="flex gap-2 justify-center items-start">
-                  <div className="h-16 w-16 rounded-full bg-white flex justify-center items-center">
-                  <MapPin className="text-xl text-green-400" size={30} />
+                    <div className="h-16 w-16 rounded-full bg-white flex justify-center items-center">
+                      <MapPin className="text-xl text-green-400" size={30} />
                     </div>
                     <div className="flex flex-col">
-                    <span className="font-medium text-2xl">
+                      <span className="font-medium text-2xl">
                         Office Address:
                       </span>
                       <p className="leading-relaxed text-gray-200">
@@ -125,7 +125,7 @@ function page() {
               </div>
               {/* <!-- Column --> */}
               <div className="column col-lg-7 col-md-6 col-sm-12">
-                <ContactForm />              
+                <ContactForm />
               </div>
             </div>
           </div>

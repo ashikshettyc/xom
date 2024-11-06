@@ -1,10 +1,10 @@
 "use client"
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 function FooterLinks() {
-    const pathname = useRouter()
+    const pathname = usePathname() as string
   return (
     <>
          
