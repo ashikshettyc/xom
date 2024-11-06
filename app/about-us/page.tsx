@@ -21,6 +21,7 @@ function page() {
             width: '100%',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            
           }}
         >
           <div className="container  text-white text-2xl pt-1/2">
@@ -53,7 +54,7 @@ function page() {
                 <div className="about-image">
                   <div className="about-inner-image">
                     <Image
-                      src="/images/about/about-work.jpg"
+                      src="/images/about/about-work.webp"
                       width={600}
                       height={600}
                       alt="about"
@@ -131,7 +132,7 @@ function page() {
                 data-wow-duration="1500ms"
               >
                 <div className="image">
-                  <a href="#">
+                  <a >
                     <Image
                       src="/images/members/Musab.jpg"
                       width={500}
@@ -169,7 +170,7 @@ function page() {
                 </div>
                 <div className="lower-box mt-0">
                   <h4>
-                    <a href="#">Musab Al Mahruqi</a>
+                    <a >Musab Al Mahruqi</a>
                   </h4>
                   <div className="designation">Owner & Managing Partner</div>
                 </div>
@@ -184,7 +185,7 @@ function page() {
                 data-wow-duration="1500ms"
               >
                 <div className="image">
-                  <a href="#">
+                  <a >
                     <Image
                       src="/images/members/Lane.jpg"
                       width={500}
@@ -222,7 +223,7 @@ function page() {
                 </div>
                 <div className="lower-box mt-0">
                   <h4>
-                    <a href="#">Lane Roberts</a>
+                    <a >Lane Roberts</a>
                   </h4>
                   <div className="designation">Owner & Partner</div>
                 </div>
@@ -237,7 +238,7 @@ function page() {
                 data-wow-duration="1500ms"
               >
                 <div className="image">
-                  <a href="#">
+                  <a >
                     <Image
                       src="/images/members/Mohammed.jpg"
                       width={500}
@@ -275,7 +276,7 @@ function page() {
                 </div>
                 <div className="lower-box mt-0">
                   <h4>
-                    <a href="#">Mohammed Al Barashdi </a>
+                    <a >Mohammed Al Barashdi </a>
                   </h4>
                   <div className="designation">Chief Operating Officer</div>
                 </div>
@@ -353,69 +354,7 @@ function page() {
               </div>
             </div>
 
-            {/* <!-- Form Column --> */}
-            <div className="form-column col-lg-5 col-md-12 col-sm-12">
-              {/* <div className="inner-column">
-                <div className="form-boxed">
-                  <h5>free consulation</h5>
-
-                  <div className="consult-form">
-                    <form method="post" action="donate.html">
-                  
-                      <div className="form-group">
-                        <label>full name</label>
-                        <input
-                          type="text"
-                          name="name"
-                          value="ashik"
-                          placeholder="Jason Staham"
-                          required
-                        />
-                      </div>
-                  
-                      <div className="form-group">
-                        <label>phone number</label>
-                        <input
-                          type="text"
-                          name="phone"
-                          value="ashik"
-                          placeholder="Enter your phone number"
-                          required
-                        />
-                      </div>
-                  
-                      <div className="form-group">
-                        <label>topics</label>
-                        <select className="custom-select-box">
-                          <option>Choose topic</option>
-                          <option>Topic 01</option>
-                          <option>Topic 02</option>
-                          <option>Topic 03</option>
-                          <option>Topic 04</option>
-                        </select>
-                      </div>
-                     
-                      <div className="form-group">
-                        <label>message</label>
-                        <textarea
-                          name="message"
-                          placeholder="Write your message here"
-                        ></textarea>
-                      </div>
-                      <div className="form-group">
-                        <button
-                          className="theme-btn btn-style-one"
-                          type="submit"
-                          name="submit-form"
-                        >
-                          <span className="txt">send your messenger</span>
-                        </button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div> */}
-            </div>
+            
           </div>
         </div>
       </div>

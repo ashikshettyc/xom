@@ -70,3 +70,15 @@
     @apply bg-background text-foreground;
   }
 } */
+.reputation-section-two{
+  padding: 60px 0px 60px !important;
+}
+.main-footer .widgets-section{
+  padding: 2rem 0 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .about-section .inner-container {
+      padding-bottom: 0 !important;
+  }
+}

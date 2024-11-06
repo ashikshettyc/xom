@@ -32,7 +32,7 @@ export default function ClientLogo() {
           <ul className="sponsors-carousel owl-carousel owl-theme">
             <li>
               <div className="image-box" style={{ filter: 'none', opacity: 1 }}>
-                <a href="javascript:void(0);">
+                <a>
                   <div className="h-[100px] overflow-hidden">
                     <Image
                       src="/images/PDO.webp"
@@ -51,7 +51,7 @@ export default function ClientLogo() {
             </li>
             <li>
               <div className="image-box" style={{ filter: 'none', opacity: 1 }}>
-                <a href="javascript:void(0);">
+                <a>
                   <div className="h-[100px] overflow-hidden">
                     <Image
                       src="/images/Shell Oman.webp"
@@ -70,7 +70,7 @@ export default function ClientLogo() {
             </li>
             <li>
               <div className="image-box" style={{ filter: 'none', opacity: 1 }}>
-                <a href="javascript:void(0);">
+                <a>
                   <div className="h-[100px] overflow-hidden">
                     <Image
                       src="/images/anton.webp"
@@ -89,7 +89,7 @@ export default function ClientLogo() {
             </li>
             <li>
               <div className="image-box" style={{ filter: 'none', opacity: 1 }}>
-                <a href="javascript:void(0);">
+                <a>
                   <div className="h-[100px]  overflow-hidden">
                     <Image
                       src="/images/Daleel.webp"

@@ -84,7 +84,7 @@ export default function Home() {
                 <div className="about-image">
                   <div className="about-inner-image">
                     <Image
-                      src="/images/about/home-about.png"
+                      src="/images/about/home-about.webp"
                       width={600}
                       height={600}
                       alt="about"

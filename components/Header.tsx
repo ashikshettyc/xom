@@ -36,10 +36,10 @@ export default function HeaderComp() {
               <div className="top-right pull-right">
                 <ul className="info-list">
                   <li>
-                    <a href="contact">
+                    <Link href="contact-us">
                       <span className="icon icofont-location-pin"></span> P.O
                       Box 2467 . PC 133 Al Khuwair
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>

@@ -49,12 +49,7 @@ reset()
   return (
     <div>
          <div className="form-boxed">
-              <div className="sec-title centered">
-                <div className="title">contact us</div>
-                <h2>
-                  We Always Here <span>To Help You</span>
-                </h2>
-              </div>
+             
 
               <div className="boxed-inner">
                
@@ -62,7 +57,7 @@ reset()
                  
                   <form onSubmit={handleSubmit(onSubmit)} id="contact-form">
                     <div className="row clearfix">
-                      <div className="col-lg-4 col-md-6 col-sm-12 form-group">
+                      <div className="col-lg-6 col-md-6 col-sm-12 form-group">
                         <input
                           type="text"                          
                           placeholder="Name *"
@@ -71,7 +66,7 @@ reset()
                         {errors.name && <span>{errors.name.message}</span>}
                       </div>
 
-                      <div className="col-lg-4 col-md-6 col-sm-12 form-group">
+                      <div className="col-lg-6 col-md-6 col-sm-12 form-group">
                         <input
                           type="email"
                           placeholder="Emaill Address *"
@@ -81,7 +76,7 @@ reset()
                         {errors.email && <span>{errors.email.message}</span>}
                       </div>
 
-                      <div className="col-lg-4 col-md-12 col-sm-12 form-group">
+                      <div className="col-lg-12 col-md-12 col-sm-12 form-group">
                         <input
                           type="text"
                           placeholder="Subject (Optional)"
@@ -99,11 +94,11 @@ reset()
 
                       <div className="col-lg-12 col-md-12 col-sm-12 text-center form-group">
                         <button
-                          className="theme-btn btn-style-one"
+                          className="theme-btn btn-style-one bg-white"
                           type="submit"
                           disabled={isSubmitting}
                         >
-                          <span className="txt">{isSubmitting ? "Sending..." : status}</span>
+                          <span className="txt text-greenish">{isSubmitting ? "Sending..." : status}</span>
                         </button>
                       </div>
                     </div>

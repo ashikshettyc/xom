@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
+import FooterLinks from './footer/FooterLinks';
 const Footer: React.FC = () => {
   const currentYear = format(new Date(), 'yyyy');
 
@@ -44,7 +45,7 @@ const Footer: React.FC = () => {
                   </div>
 
                   {/* Footer Column */}
-                  <div className="footer-column col-lg-6 col-md-6 col-sm-12">
+                  {/* <div className="footer-column col-lg-6 col-md-6 col-sm-12">
                     <div className="footer-widget links-widget">
                       <h5>Company</h5>
                       <ul className="list-link">
@@ -68,6 +69,9 @@ const Footer: React.FC = () => {
                         </li>
                       </ul>
                     </div>
+                  </div> */}
+                  <div className="footer-column col-lg-6 col-md-6 col-sm-12">
+                  <FooterLinks/>
                   </div>
                 </div>
               </div>
