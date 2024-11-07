@@ -110,6 +110,7 @@ $('[data-bg-image], [data-bg-color]').each(function () {
 		$('.main-slider-carousel').owlCarousel({
 			loop:true,
 			margin:0,
+			lazyLoad:true,
 			nav:true,
 			smartSpeed: 0,
 			autoplay: 6000,

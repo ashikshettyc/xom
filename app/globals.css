@@ -82,3 +82,41 @@
       padding-bottom: 0 !important;
   }
 }
+
+@media only screen and (min-width: 1200px) and (max-width: 1499px) {
+    .banner-section .slide {
+        height: 600px !important;
+    }
+}
+.banner-section .content-column .text{
+  margin-bottom: 50px !important;
+}
+
+/* Add this in your global CSS file or CSS module */
+
+.sponsor-section {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.sponsor-track {
+  display: flex;
+  width: calc(400%); /* Ensures enough space for smooth scrolling */
+}
+
+.sponsor-logo {
+  min-width: 150px; /* Adjust width based on logo size */
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px; /* Space between logos */
+}
+.sponsor-logo img{
+  min-width: 150px; /* Adjust width based on logo size */
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

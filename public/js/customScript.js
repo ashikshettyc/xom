@@ -40,6 +40,7 @@
     $('.main-slider-carousel').owlCarousel({
       loop: true,
       margin: 0,
+      lazyLoad:true,
       nav: true,
       smartSpeed: 0,
       autoplay: 6000,
@@ -143,37 +144,40 @@
     });
   }
 
-  // Sponsors Item Carousel
-  if ($('.sponsors-carousel').length) {
-    $('.sponsors-carousel').owlCarousel({
-      loop: true,
-      margin: 30,
-      nav: true,
-      smartSpeed: 500,
-      autoplay: 2000,
-      navText: [
-        '<span class="ti-angle-left"></span>',
-        '<span class="ti-angle-right"></span>',
-      ],
-      responsive: {
-        0: {
-          items: 2,
-        },
-        480: {
-          items: 3,
-        },
-        600: {
-          items: 4,
-        },
-        800: {
-          items: 5,
-        },
-        1024: {
-          items: 5,
-        },
+ // Sponsors Item Carousel
+if ($('.sponsors-carousel').length) {
+  $('.sponsors-carousel').owlCarousel({
+    loop: true, // Infinite loop
+    margin: 30, // Space between items
+    nav: true, // Show navigation buttons
+    navText: [
+      '<span class="ti-angle-left"></span>', // Left arrow icon
+      '<span class="ti-angle-right"></span>', // Right arrow icon
+    ],
+    autoplay: true, // Enable autoplay
+    autoplayTimeout: 3000, // Auto slide every 3 seconds
+    autoplayHoverPause: true, // Pause autoplay on hover
+    smartSpeed: 500, // Transition speed
+    responsive: {
+      0: {
+        items: 2, // 2 items on small screens
       },
-    });
-  }
+      480: {
+        items: 3, // 3 items on medium screens
+      },
+      600: {
+        items: 4, // 4 items on larger screens
+      },
+      800: {
+        items: 5, // 5 items on wide screens
+      },
+      1024: {
+        items: 5, // 5 items on larger screens
+      },
+    },
+  });
+}
+
 
   //Accordion Box
   if ($('.accordion-box').length) {

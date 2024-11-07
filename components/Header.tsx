@@ -10,7 +10,9 @@ export default function HeaderComp() {
 
   return (
     <>
-      <header className={`main-header ${pathname !== '/' && 'style-two'}`}>
+      <header className={`main-header style-two 1`}
+        // ${pathname !== '/' && 'style-two'}`}
+        >
         {/* Header Top */}
         <div className="header-top">
           <div className="auto-container">
@@ -95,10 +97,10 @@ export default function HeaderComp() {
                     id="navbarSupportedContent"
                   >
                     <ul className="navigation clearfix">
-                      <li className="current">
+                      <li className={`${pathname === "/" && "current"}`}>
                         <Link href="/">Home</Link>
                       </li>
-                      <li>
+                      <li className={`${pathname === "#what_we_do" && "current"}`}>
                         <Link
                           href={`${
                             pathname === '/about-us' ||
@@ -110,7 +112,7 @@ export default function HeaderComp() {
                           What We Do
                         </Link>
                       </li>
-                      <li>
+                      <li className={`${pathname === "/#where_we_operate" && "current"}`}>
                         <Link
                           href={`${
                             pathname === '/about-us' ||
@@ -122,10 +124,10 @@ export default function HeaderComp() {
                           Where We Operate
                         </Link>
                       </li>
-                      <li>
+                      <li className={`${pathname === "/about-us" && "current"}`}>
                         <Link href="about-us">About</Link>
                       </li>
-                      <li>
+                      <li className={`${pathname === "/contact-us" && "current"}`}>
                         <Link href="contact-us">Contact</Link>
                       </li>
                     </ul>

@@ -14,16 +14,8 @@ function page() {
     <>
       <section>
         <div
-          className="page-title d-flex align-items-center justify-content-center"
-          style={{
-            backgroundImage: "url('/images/oilRig.webp')",
-            height: '60vh',
-            width: '100%',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            
-          }}
-        >
+          className="relative page-title d-flex align-items-center justify-content-center   bg-[url('/images/oilRig.webp')] h-[60vh] w-full bg-cover bg-center">        
+          {/* <Image width={500} height={5000} alt="background" className='absolute inset-0'/> */}
           <div className="container  text-white text-2xl pt-1/2">
             {/* Bootstrap Breadcrumb */}
             <nav aria-label="breadcrumb">
