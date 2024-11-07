@@ -1,5 +1,7 @@
+import AboutCard from '@/components/about/AboutCard';
+import SlidingImg from '@/components/about/SliderImg';
+import AllHeadings from '@/components/AllHeadings';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 export const generateMetadata = (): Metadata => {
@@ -13,8 +15,7 @@ function page() {
   return (
     <>
       <section>
-        <div
-          className="relative page-title d-flex align-items-center justify-content-center   bg-[url('/images/oilRig.webp')] h-[60vh] w-full bg-cover bg-center">        
+        <div className="relative page-title d-flex align-items-center justify-content-center   bg-[url('/images/oilRig.webp')] h-[60vh] w-full bg-cover bg-center">
           {/* <Image width={500} height={5000} alt="background" className='absolute inset-0'/> */}
           <div className="container  text-white text-2xl pt-1/2">
             {/* Bootstrap Breadcrumb */}
@@ -42,54 +43,7 @@ function page() {
         <div className="auto-container">
           <div className="">
             <div className="row align-items-center clearfix">
-              <div className="image-column col-lg-6">
-                <div className="about-image">
-                  <div className="about-inner-image">
-                    <Image
-                      src="/images/about/about-work.webp"
-                      width={600}
-                      height={600}
-                      alt="about"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className="content-column col-lg-6 col-md-12 col-sm-12 mb-0">
-                <div className="about-column">
-                  <div className="sec-title">
-                    <div className="title">about XOM</div>
-                    <h2>
-                      Driven by the <span>Belief</span> that Everyone Can
-                      <span> Thrive</span>
-                    </h2>
-                  </div>
-                  <div className="text">
-                    <p>
-                      Founded in 2016, XOM has established itself as a
-                      pioneering technology leader in Oman’s oilfield sector.
-                      With over seven years of dedicated service, XOM has not
-                      only grown within Oman but has become recognized
-                      internationally for driving a new era of oilfield
-                      entrepreneurship. Drawing from our roots in XOM Oilfield
-                      Services, we maintain a culture of innovation, integrity,
-                      and excellence.
-                    </p>
-
-                    <p>
-                      Our commitment to high in-country value (ICV), along with
-                      our investment in the latest technologies and equipment,
-                      enables us to deliver exceptional value to our clients. We
-                      believe in combining quality with cost-effectiveness,
-                      making us a preferred choice in the industry. XOM’s team
-                      of expert operators and engineers brings world-class
-                      expertise and a relentless focus on safety to every
-                      project, ensuring that we exceed client expectations every
-                      time.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <SlidingImg />
             </div>
           </div>
         </div>
@@ -99,181 +53,46 @@ function page() {
       <div className="experts-section pt-0 ">
         <div className="auto-container">
           {/* <!-- Sec Title --> */}
-          <div className="sec-title">
+          <AllHeadings
+            title="our services"
+            description1="We Are"
+            description2=" Friendly & Profressional"
+            y={-100}
+          />
+          {/* <div className="sec-title">
             <div className="clearfix">
-              <div className="pull-left">
+              <div className="">
                 <div className="title">our services</div>
                 <h2>
                   We Are <span>Friendly & Profressional</span>
                 </h2>
               </div>
-              {/* <div className="pull-right">
-                <a href="service.html" className="experts">
-                  all experts <span className="arrow ti-angle-right"></span>
-                </a>
-              </div> */}
             </div>
-          </div>
+          </div> */}
 
           <div className="row clearfix">
             {/* <!-- Team Block --> */}
-            <div className="team-block col-lg-4 col-md-6 col-sm-6 col-12">
-              <div
-                className="inner-box wow fadeInLeft"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="image">
-                  <a >
-                    <Image
-                      src="/images/members/Musab.jpg"
-                      width={500}
-                      height={50}
-                      alt=""
-                    />
-                  </a>
-                  {/* <!-- Social Box --> */}
-                  {/* <ul className="social-box">
-                    <li>
-                      <a
-                        href="https://twitter.com/"
-                        className="icofont-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="http://facebook.com/"
-                        className="icofont-facebook"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/"
-                        className="icofont-instagram"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/"
-                        className="icofont-linkedin"
-                      ></a>
-                    </li>
-                  </ul> */}
-                </div>
-                <div className="lower-box mt-0">
-                  <h4>
-                    <a >Musab Al Mahruqi</a>
-                  </h4>
-                  <div className="designation">Owner & Managing Partner</div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Team Block --> */}
-            <div className="team-block col-lg-4 col-md-6 col-sm-6 col-12">
-              <div
-                className="inner-box wow fadeInUp"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="image">
-                  <a >
-                    <Image
-                      src="/images/members/Lane.jpg"
-                      width={500}
-                      height={50}
-                      alt=""
-                    />
-                  </a>
-                  {/* <!-- Social Box --> */}
-                  {/* <ul className="social-box">
-                    <li>
-                      <a
-                        href="https://twitter.com/"
-                        className="icofont-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="http://facebook.com/"
-                        className="icofont-facebook"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/"
-                        className="icofont-instagram"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/"
-                        className="icofont-linkedin"
-                      ></a>
-                    </li>
-                  </ul> */}
-                </div>
-                <div className="lower-box mt-0">
-                  <h4>
-                    <a >Lane Roberts</a>
-                  </h4>
-                  <div className="designation">Owner & Partner</div>
-                </div>
-              </div>
-            </div>
-
-            {/* <!-- Team Block --> */}
-            <div className="team-block col-lg-4 col-md-6 col-sm-6 col-12">
-              <div
-                className="inner-box wow fadeInRight"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-              >
-                <div className="image">
-                  <a >
-                    <Image
-                      src="/images/members/Mohammed.jpg"
-                      width={500}
-                      height={50}
-                      alt=""
-                    />
-                  </a>
-                  {/* <!-- Social Box --> */}
-                  {/* <ul className="social-box">
-                    <li>
-                      <a
-                        href="https://twitter.com/"
-                        className="icofont-twitter"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="http://facebook.com/"
-                        className="icofont-facebook"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.instagram.com/"
-                        className="icofont-instagram"
-                      ></a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://www.linkedin.com/"
-                        className="icofont-linkedin"
-                      ></a>
-                    </li>
-                  </ul> */}
-                </div>
-                <div className="lower-box mt-0">
-                  <h4>
-                    <a >Mohammed Al Barashdi </a>
-                  </h4>
-                  <div className="designation">Chief Operating Officer</div>
-                </div>
-              </div>
-            </div>
+            <AboutCard
+              path="/images/members/Musab.jpg"
+              name="Musab Al Mahruqi"
+              designation="Owner & Managing Partner"
+              duration={1}
+              delay={0.8}
+            />
+            <AboutCard
+              path="/images/members/Lane.jpg"
+              name="Lane Roberts"
+              designation="Owner & Partner"
+              duration={1.2}
+              delay={1}
+            />
+            <AboutCard
+              path="/images/members/Mohammed.jpg"
+              name="Mohammed Al Barashdi"
+              designation="Chief Operating Officer"
+              duration={1.4}
+              delay={1.2}
+            />
           </div>
         </div>
       </div>
@@ -285,22 +104,22 @@ function page() {
             {/* <!-- Content Column --> */}
             <div className="content-column col-sm-12 pb-0 mb-0">
               <div className="inner-column">
-                <div className="sec-title">
-                  <div className="title">why choose us</div>
-                  <h2>
-                    <span>Your Successful </span>Is Our Reputation
-                  </h2>
-                </div>
+                <AllHeadings
+                  title="why choose us"
+                  description1="Your Successful"
+                  description2=" Is Our Reputation"
+                  y={-100}
+                />
                 <div className="blocks-outer">
                   {/* <!-- Reputation Block --> */}
                   <div className="reputation-block">
                     <div className="inner-box">
-                      <h5>In-Depth Market Analysis</h5>
+                      <h5>Empowering Growth with Market Insights</h5>
                       <div className="text">
-                        We utilize comprehensive market analysis to provide
-                        insights that fuel growth. By understanding the nuances
-                        of your industry, we tailor our strategies to meet your
-                        specific needs.
+                        Our in-depth market insights drive meaningful growth. By
+                        deeply understanding your industry, we craft strategies
+                        that unlock new opportunities and are tailored to your
+                        unique goals.
                       </div>
                     </div>
                   </div>
@@ -345,8 +164,6 @@ function page() {
                 </div>
               </div>
             </div>
-
-            
           </div>
         </div>
       </div>

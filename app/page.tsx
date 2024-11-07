@@ -1,44 +1,24 @@
-import Card from "@/components/Card";
-import ClientLogo from "@/components/homepage/ClientLogo";
-import FlagImg from "@/components/homepage/FlagImg";
-import HeaderCarosel from "@/components/homepage/HeaderCarousel";
-import SlidingImg from "@/components/homepage/SliderImg";
-import React from "react";
+import AllHeadings from '@/components/AllHeadings';
+import Card from '@/components/Card';
+import ClientLogo from '@/components/homepage/ClientLogo';
+import CtaInfo from '@/components/homepage/CtaInfo';
+import FlagImg from '@/components/homepage/FlagImg';
+import HeaderCarosel from '@/components/homepage/HeaderCarousel';
+import SlidingImg from '@/components/homepage/SliderImg';
+import React from 'react';
 
 export default function Home() {
   return (
     <>
       <HeaderCarosel />
-     
+
       {/* <!-- CTA Section Start --> */}
       <div
         className="cta-section"
         data-bg-image="images/background/cta-bg.webp"
       >
         <div className="auto-container">
-          <div className="row align-items-center">
-            <div className="col-lg-7">
-              {/* <!-- CTA Content Start --> */}
-              <div className="cta-content">
-                <h3 className="title">
-                  For Any Information Please{" "}
-                  <span className="text-bold">Call us now!</span>
-                </h3>
-                <p>We prodive a dedicated support 24/7 for any your question</p>
-              </div>
-              {/* <!-- CTA Content End --> */}
-            </div>
-            <div className="col-lg-5">
-              {/* <!-- CTA Phone Number Start --> */}
-              <div className="cta-phone text-lg-end text-strat">
-                <a href="tel:+96824621546">
-                  {" "}
-                  <h2 className="title">+968 24621546</h2>
-                </a>
-              </div>
-              {/* <!-- CTA Phone Number Start --> */}
-            </div>
-          </div>
+          <CtaInfo />
         </div>
       </div>
       {/* <!-- CTA Section End --> */}
@@ -57,34 +37,34 @@ export default function Home() {
       {/* <!-- Services Section --> */}
       <div className="py-5" id="what_we_do">
         <div className="auto-container">
-          <div className="sec-title">
-            <div className="title">Our Services</div>
-            <h2>
-              <span>What</span> We Do
-            </h2>
-          </div>
+          <AllHeadings
+            title="Our Services"
+            description1="What"
+            description2=" We Do"
+            y={-100}
+          />
           <div className="inner-container">
             <div className="row">
               {/* Service Block 1 */}
               <Card
-                title={"XDS"}
-                subHeading={"XOM Drilling Systems"}
-                list1={"Directional Drilling"}
-                list2={"LWD"}
-                list3={"MWD"}
+                title={'XDS'}
+                subHeading={'XOM Drilling Systems'}
+                list1={'Directional Drilling'}
+                list2={'LWD'}
+                list3={'MWD'}
                 y={-100}
-                path="cardimage-1.jpg"
+                path="/cardimage-1.jpg"
               />
 
               {/* Service Block 2 */}
               <Card
-                title={"XWM"}
-                subHeading={"XOM Well Maintenance"}
-                list1={"Well Head Maintenance"}
-                list2={"Slickline"}
-                list3={"NCP"}
+                title={'XWM'}
+                subHeading={'XOM Well Maintenance'}
+                list1={'Well Head Maintenance'}
+                list2={'Slickline'}
+                list3={'NCP'}
                 y={100}
-                path="cardimage-2.jpg"
+                path="/cardimage-2.jpg"
               />
             </div>
           </div>
@@ -95,6 +75,7 @@ export default function Home() {
       <div className="project-section" id="where_we_operate">
         <div className="auto-container">
           {/* Sec Title */}
+
           <div className="sec-title">
             <div className="clearfix">
               <div className="pull-left">
@@ -112,15 +93,15 @@ export default function Home() {
         <div className="container">
           <div className="row clearfix">
             <FlagImg
-              src={"/images/iraq.webp"}
-              alt={"Iraq"}
+              src={'/images/iraq.webp'}
+              alt={'Iraq'}
               width={300}
               height={100}
               x={-100}
             />
             <FlagImg
-              src={"/images/oman.webp"}
-              alt={"Oman"}
+              src={'/images/oman.webp'}
+              alt={'Oman'}
               width={250}
               height={100}
               x={100}
@@ -130,21 +111,25 @@ export default function Home() {
       </div>
 
       {/* Testimonial Section */}
-      <div className="testimonial-section">
+      <div className="testimonial-section ">
         <div className="auto-container">
           {/* Sec Title */}
-          <div className="sec-title mb-0">
-            <div className="title">Testimonials</div>
-            <h2>
-              Our <span>Clients</span>
-            </h2>
+          <div className="mb-0">
+            <AllHeadings
+              title="Testimonials"
+              description1="Our"
+              description2=" Clients"
+              y={-100}
+            />
           </div>
         </div>
       </div>
       {/* End Testimonial Section */}
 
       {/* Sponsors Section */}
-      <ClientLogo />
+      <div className="relative md:-top-10  -top-5">
+        <ClientLogo />
+      </div>
 
       {/* End Sponsors Section */}
 

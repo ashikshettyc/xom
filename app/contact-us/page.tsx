@@ -1,23 +1,20 @@
-import ContactForm from "@/components/ContactForm";
-import { Metadata } from "next";
-import Link from "next/link";
-import React from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import ContactForm from '@/components/ContactForm';
+import { Metadata } from 'next';
+import Link from 'next/link';
+import React from 'react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 export const generateMetadata = (): Metadata => {
   return {
-    title: "Contact Us | XOM Oman | Oil Field Services",
+    title: 'Contact Us | XOM Oman | Oil Field Services',
     description:
-      "Get in touch with XOM Oman to learn more about our comprehensive oil field services. Our expert team is ready to assist you with all your inquiries and provide tailored solutions for your needs.D",
+      'Get in touch with XOM Oman to learn more about our comprehensive oil field services. Our expert team is ready to assist you with all your inquiries and provide tailored solutions for your needs.D',
   };
 };
 function page() {
   return (
     <>
       <section>
-        <div
-          className="page-title d-flex align-items-center justify-content-center  bg-[url('/images/oilRig.webp')] h-[60vh] w-full bg-cover bg-center"
-         
-        >
+        <div className="page-title d-flex align-items-center justify-content-center  bg-[url('/images/oilRig.webp')] h-[60vh] w-full bg-cover bg-center">
           <div className="container  text-white text-2xl pt-1/2">
             {/* Bootstrap Breadcrumb */}
             <nav aria-label="breadcrumb">
@@ -68,7 +65,7 @@ function page() {
                           href="tel:+96824625907"
                           className="text-white text-lg"
                         >
-                          +968 24625907 /{" "}
+                          +968 24625907 /{' '}
                         </a>
                         <a
                           href="tel:+96824621546"
