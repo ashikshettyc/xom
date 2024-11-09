@@ -4,13 +4,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 function SlidingImg() {
   return (
     <>
       <motion.div
         className="image-column col-lg-6" // Add your styling classes here
-        initial={{ opacity: 0, x: -100 }} // Initial state: hidden and slightly to the right
+        initial={{ opacity: 0, x: -50 }} // Initial state: hidden and slightly to the right
         whileInView={{ opacity: 1, x: 0 }} // Final state: fully visible and moved to original position
         transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }} // Animation details
         viewport={{ once: true, amount: 0.5 }} // Trigger when 50% of the element is in view
@@ -28,10 +29,10 @@ function SlidingImg() {
       </motion.div>
       <motion.div
         className="content-column col-lg-6 col-md-12 col-sm-12 mb-0"
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }} 
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
-        viewport={{ once: true, amount: 0.5 }} 
+        viewport={{ once: true, amount: 0.5 }}
       >
         <div className="about-column">
           <div className="sec-title">
@@ -59,6 +60,11 @@ function SlidingImg() {
               of operators and engineers achieve a world-className service at a
               very high safety standard.
             </p>
+            <div className="btn-box md:mb-10">
+              <Link href="about-us" className="theme-btn btn-style-one">
+                <span className="txt">About Us</span>
+              </Link>
+            </div>
           </div>
         </div>
       </motion.div>

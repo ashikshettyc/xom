@@ -60,6 +60,38 @@ export default function ClientLogo() {
         <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
         <SponsorLogo src="/images/anton.webp" alt="Anton" />
         <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
+        <SponsorLogo src="/images/PDO.webp" alt="PDO" />
+        <SponsorLogo src="/images/Shell Oman.webp" alt="Shell Oman" />
+        <SponsorLogo src="/images/anton.webp" alt="Anton" />
+        <SponsorLogo src="/images/Daleel.webp" alt="Daleel" />
         
       </motion.div>
     </div>

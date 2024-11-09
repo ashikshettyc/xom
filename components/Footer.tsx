@@ -20,19 +20,19 @@ const Footer: React.FC = () => {
               <div className="big-column col-lg-6 col-md-12 col-sm-6 col-12">
                 <div className="row clearfix">
                   {/* Footer Column */}
-                  <div className="footer-column col-lg-6 col-md-6 col-sm-12">
+                  <div className="footer-column col-lg-6 col-md-6 col-sm-12 flex justify-start items-center">
                     <div className="footer-widget logo-widget">
                       <div className="logo">
                         <a href="#intro">
                           <Image
                             src="/images/logo.png"
                             alt="Logo"
-                            width={80}
-                            height={80}
+                            width={150}
+                            height={150}
                           />
                         </a>
                       </div>
-                      <div className="call">
+                      {/* <div className="call">
                         Call us directly
                         <a className="phone" href="tel:+96824621546">
                           +968 24621546
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                         <a className="phone" href="tel:+96824625907">
                           +968 24625907
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
@@ -93,13 +93,28 @@ const Footer: React.FC = () => {
 
                   {/* Footer Column */}
                   <div className="footer-column col-lg-6 col-md-6 col-sm-12">
-                    <div className="footer-widget newsletter-widget">
+                  <div className="footer-widget logo-widget">
+                  <div className=" font-extrabold text-black text-xl my-6 text-start">
+                        Call us
+                       
+                     
+                      </div>
+                      <div className='text-xl'>
+                        <a className="phone text-gray-600" href="tel:+96824621546">
+                          +968 24621546
+                        </a> <br />
+                        <a className="phone text-gray-600" href="tel:+96824625907">
+                          +968 24625907
+                        </a>
+                        </div>
+                      </div>
+                    {/* <div className="footer-widget newsletter-widget">
                       <h5>Our Newsletter</h5>
                       <div className="text">
                         Subscribe to our newsletter and we will inform you about
                         the latest updates and offers.
                       </div>
-                      {/* Newsletter Form */}
+             
                       <div className="newsletter-form">
                         <form method="post" action="/">
                           <div className="form-group">
@@ -116,7 +131,7 @@ const Footer: React.FC = () => {
                           </div>
                         </form>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

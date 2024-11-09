@@ -124,6 +124,9 @@ export default function HeaderComp() {
                           Where We Operate
                         </Link>
                       </li>
+                      <li className={`${pathname === "/management" && "current"}`}>
+                        <Link href="our-team">Our Team</Link>
+                      </li>
                       <li className={`${pathname === "/about-us" && "current"}`}>
                         <Link href="about-us">About</Link>
                       </li>
@@ -138,9 +141,9 @@ export default function HeaderComp() {
               {/* Outer Box */}
               <div className="outer-box">
                 {/* Search Btn */}
-                <div className="search-box-btn search-box-outer">
+                {/* <div className="search-box-btn search-box-outer">
                   <span className="icon icofont-search"></span>
-                </div>
+                </div> */}
                 {/* Mobile Navigation Toggler */}
                 <div className="mobile-nav-toggler">
                   <span className="icon ti-menu"></span>

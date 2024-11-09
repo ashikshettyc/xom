@@ -13,7 +13,7 @@ function AboutCard({ path, name, designation, duration, delay }: FounderType) {
   return (
     <motion.div
       className="team-block col-lg-4 col-md-6 col-sm-6 col-12"
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: duration, ease: 'easeOut', delay: delay }}
       viewport={{ once: true, amount: 0.5 }}

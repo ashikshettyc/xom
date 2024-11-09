@@ -22,18 +22,19 @@ function Card({ title, subHeading, list1, list2, list3, y, path }: Cardtypes) {
       viewport={{ once: true, amount: 0.5 }}
     >
       <div
-        className={`relative modern-card p-8 bg-white  rounded-2xl shadow-lg transform transition-all hover:scale-[1.02] hover:shadow-xl  bg-contain bg-center`}
+        className={`relative modern-card p-8 bg-white  rounded-2xl shadow-lg transform transition-all hover:scale-[1.02] hover:shadow-xl  bg-cover bg-no-repeat bg-center`}
         style={{ backgroundImage: `url('/images/${path}')` }}
       >
-        <div className="absolute inset-0  rounded-2xl bg-black opacity-60"></div>
+        <div className="absolute inset-0  rounded-2xl bg-black opacity-15"></div>
+        <div className="absolute inset-0  rounded-2xl bg-greenish opacity-40"></div>
         {/* <div className="icon-box mb-6 flex justify-center items-center bg-[#fb8f44] text-white rounded-full w-16 h-16 shadow-md">
                     <span className="icon ti-user text-2xl"></span>
                 </div> */}
 
-        <h2 className="text-white font-semibold text-6xl mb-2 text-center">
+        <h2 className="text-white font-semibold text-6xl mb-2">
           {title}
         </h2>
-        <h4 className="text-white font-medium text-2xl mb-4 text-center">
+        <h4 className="text-white font-medium text-2xl mb-4">
           {subHeading}
         </h4>
 

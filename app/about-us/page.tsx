@@ -15,9 +15,10 @@ function page() {
   return (
     <>
       <section>
-        <div className="relative page-title d-flex align-items-center justify-content-center   bg-[url('/images/oilRig.webp')] h-[60vh] w-full bg-cover bg-center">
+        <div className="relative page-title d-flex align-items-center justify-content-center bg-[url('/images/oilRig.webp')] h-[50vh] w-full bg-cover bg-center">
           {/* <Image width={500} height={5000} alt="background" className='absolute inset-0'/> */}
-          <div className="container  text-white text-2xl pt-1/2">
+          <div className='auto-container w-100'>
+          <div className="  text-white text-2xl pt-1/2">
             {/* Bootstrap Breadcrumb */}
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb  mb-3">
@@ -36,6 +37,8 @@ function page() {
             </nav>
             <h2 className="text-white font-bold">About Us</h2>
           </div>
+          </div>
+          
         </div>
       </section>
       {/* <!-- About Section --> */}
@@ -54,7 +57,7 @@ function page() {
         <div className="auto-container">
           {/* <!-- Sec Title --> */}
           <AllHeadings
-            title="our services"
+            title="our Leaders"
             description1="We Are"
             description2=" Friendly & Profressional"
             y={-100}

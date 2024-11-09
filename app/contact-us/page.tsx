@@ -7,15 +7,16 @@ export const generateMetadata = (): Metadata => {
   return {
     title: 'Contact Us | XOM Oman | Oil Field Services',
     description:
-      'Get in touch with XOM Oman to learn more about our comprehensive oil field services. Our expert team is ready to assist you with all your inquiries and provide tailored solutions for your needs.D',
+      'Get in touch with XOM Oman to learn more about our comprehensive oil field services. Our expert team is ready to assist you with all your inquiries and provide tailored solutions for your needs.',
   };
 };
 function page() {
   return (
     <>
       <section>
-        <div className="page-title d-flex align-items-center justify-content-center  bg-[url('/images/oilRig.webp')] h-[60vh] w-full bg-cover bg-center">
-          <div className="container  text-white text-2xl pt-1/2">
+        <div className="page-title d-flex align-items-center justify-content-center  bg-[url('/images/oilRig.webp')] h-[50vh] w-full bg-cover bg-center ">
+        <div className='auto-container w-100'>
+        <div className="  text-white text-2xl pt-1/2">
             {/* Bootstrap Breadcrumb */}
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb  mb-3">
@@ -35,10 +36,13 @@ function page() {
             <h2 className="text-white font-bold">Contact Us</h2>
           </div>
         </div>
+          
+        </div>
       </section>
-      <div className="block md:relative container mx-auto py-4 px-0 md:py-16 md:px-16 z-10 mt-5">
+      <div className="block md:relative  mx-auto py-4 px-0 md:py-16 md:px-16 z-10 mt-5">
         {/* <!-- Contact Page Section --> */}
-        <div className="bg-greenish text-white rounded-lg shadow-lg mb-12 p-3 md:p-5">
+        <div className='auto-container'>
+        <div className=" text-white rounded-lg  mb-12 p-3 md:p-5 bg-greenish ">
           {/* <!-- Contact Info Boxed --> */}
           <div className="contact-info-boxed md:p-12  ">
             <div className="text-center mb-12">
@@ -121,6 +125,8 @@ function page() {
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
       {/* <!-- Map Section --> */}
       <div className="block md:relative -top-28 -z-0">

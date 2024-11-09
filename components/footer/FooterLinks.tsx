@@ -10,6 +10,7 @@ function FooterLinks() {
          
                     <div className="footer-widget links-widget">
                       <h5>Company</h5>
+                      <div className='md:flex gap-4 '>
                       <ul className="list-link">
                         <li>
                         <Link
@@ -38,7 +39,7 @@ function FooterLinks() {
                         : '/#where_we_operate'
                     }`}>Where We Operate</Link>                          
                         </li>
-                        <li>
+                        {/* <li>
                         <Link
                     href={`${
                       pathname === '/about-us' || pathname === '/contact-us'
@@ -46,14 +47,24 @@ function FooterLinks() {
                         : '/#innovation'
                     }`}>Innovation</Link>                              
                           
+                        </li> */}
+                        {/* <li>
+                          <Link href="about-us">About Us</Link>
                         </li>
                         <li>
+                          <Link href="contact-us">Contact</Link>
+                        </li> */}
+                      </ul>
+                      <ul className="list-link">
+                      <li>
                           <Link href="about-us">About Us</Link>
                         </li>
                         <li>
                           <Link href="contact-us">Contact</Link>
                         </li>
                       </ul>
+                      </div>
+                    
                     </div>
                   </>
     
