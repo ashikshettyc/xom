@@ -61,5 +61,5 @@ function AboutCard({ path, name, designation, duration, delay }: FounderType) {
     </motion.div>
   );
 }
-
+// about page
 export default AboutCard;
