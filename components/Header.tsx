@@ -104,7 +104,8 @@ export default function HeaderComp() {
                         <Link
                           href={`${
                             pathname === '/about-us' ||
-                            pathname === '/contact-us'
+                            pathname === '/contact-us'||
+                            pathname === '/our-team'
                               ? '/'
                               : '#what_we_do'
                           }`}
@@ -116,7 +117,8 @@ export default function HeaderComp() {
                         <Link
                           href={`${
                             pathname === '/about-us' ||
-                            pathname === '/contact-us'
+                            pathname === '/contact-us'||
+                            pathname === '/our-team'
                               ? '/'
                               : '#where_we_operate'
                           }`}
@@ -124,7 +126,7 @@ export default function HeaderComp() {
                           Where We Operate
                         </Link>
                       </li>
-                      <li className={`${pathname === "/management" && "current"}`}>
+                      <li className={`${pathname === "/our-team" && "current"}`}>
                         <Link href="our-team">Our Team</Link>
                       </li>
                       <li className={`${pathname === "/about-us" && "current"}`}>
@@ -174,6 +176,66 @@ export default function HeaderComp() {
               </Link>
             </div>
             <div className="menu-outer">
+            <div className="navbar-header">
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarSupportedContent"
+                      aria-controls="navbarSupportedContent"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                      <span className="icon-bar"></span>
+                    </button>
+                  </div>
+                  <div
+                    className="navbar-collapse show clearfix"
+                    id="navbarSupportedContent"
+                  >
+                    <ul className="navigation clearfix">
+                      <li className={`${pathname === "/" && "current"}`}>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li className={`${pathname === "#what_we_do" && "current"}`}>
+                        <Link
+                          href={`${
+                            pathname === '/about-us' ||
+                            pathname === '/contact-us'||
+                            pathname === '/our-team'
+                              ? '/'
+                              : '#what_we_do'
+                          }`}
+                        >
+                          What We Do
+                        </Link>
+                      </li>
+                      <li className={`${pathname === "/#where_we_operate" && "current"}`}>
+                        <Link
+                          href={`${
+                            pathname === '/about-us' ||
+                            pathname === '/contact-us' ||
+                            pathname === '/our-team'
+                              ? '/'
+                              : '#where_we_operate'
+                          }`}
+                        >
+                          Where We Operate
+                        </Link>
+                      </li>
+                      <li className={`${pathname === "/our-team" && "current"}`}>
+                        <Link href="our-team">Our Team</Link>
+                      </li>
+                      <li className={`${pathname === "/about-us" && "current"}`}>
+                        <Link href="about-us">About</Link>
+                      </li>
+                      <li className={`${pathname === "/contact-us" && "current"}`}>
+                        <Link href="contact-us">Contact</Link>
+                      </li>
+                    </ul>
+                  </div>
               {/* Here Menu Will Come Automatically Via Javascript / Same Menu as in Header */}
             </div>
           </nav>

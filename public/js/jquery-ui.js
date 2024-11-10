@@ -16954,7 +16954,7 @@ $.widget( "ui.spinner", {
 
 				// Add buttons
 				.append(
-					"<a></a><a></a>"
+					"<Link></Link><Link></Link>"
 				);
 	},
 
@@ -17287,7 +17287,7 @@ if ( $.uiBackCompat !== false ) {
 		},
 
 		_buttonHtml: function() {
-			return "<a></a><a></a>";
+			return "<Link></Link><Link></Link>";
 		}
 	} );
 }
