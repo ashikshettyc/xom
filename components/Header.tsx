@@ -132,6 +132,9 @@ export default function HeaderComp() {
                       <li className={`${pathname === "/about-us" && "current"}`}>
                         <Link href="about-us">About</Link>
                       </li>
+                      <li className={`${pathname === "/services" && "current"}`}>
+                        <Link href="services">Services</Link>
+                      </li>
                       <li className={`${pathname === "/contact-us" && "current"}`}>
                         <Link href="contact-us">Contact</Link>
                       </li>
@@ -230,6 +233,9 @@ export default function HeaderComp() {
                       </li>
                       <li className={`${pathname === "/about-us" && "current"}`}>
                         <Link href="about-us">About</Link>
+                      </li>
+                      <li className={`${pathname === "/services" && "current"}`}>
+                        <Link href="services">Services</Link>
                       </li>
                       <li className={`${pathname === "/contact-us" && "current"}`}>
                         <Link href="contact-us">Contact</Link>
