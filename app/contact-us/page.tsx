@@ -91,10 +91,10 @@ function page() {
                     <div className="flex flex-col">
                       <span className="font-medium text-2xl">Email:</span>
                       <a
-                        href="mailto:info@xom.com"
+                        href="mailto:info@xomoman.com"
                         className="text-white text-lg"
                       >
-                        info@xom.com
+                        info@xomoman.com
                       </a>
                     </div>
                   </div>
