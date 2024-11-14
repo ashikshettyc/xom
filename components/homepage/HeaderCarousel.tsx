@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeaderCarosel() {
   const pathname = usePathname();
@@ -28,12 +29,12 @@ export default function HeaderCarosel() {
     <div className="banner-section" id="intro">
       <div className="main-slider-carousel owl-carousel owl-theme">
         <div
-          className="slide relative 
-        bg-[url('/images/main-slider/intro-2.webp')] md:pt-0"
+          className="slide relative md:pt-0"
           // style={{ backgroundImage: 'url("/images/main-slider/intro-1.jpg")'}}
 
           // data-bg-image="/images/main-slider/intro-1.webp"
         >
+          <Image className="!object-cover" src={"/images/main-slider/intro-2.webp"} alt="background image" fill={true} priority={true} quality={75}/>
            <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="auto-container w-100">
             <div className="row clearfix">
@@ -66,10 +67,11 @@ export default function HeaderCarosel() {
           </div>
         </div>
         <div
-          className="slide relative bg-[url('/images/main-slider/intro-3.webp')] md:pt-0"
+          className="slide relative  md:pt-0 "
           // data-bg-image="/images/main-slider/intro-2.wen"
         >
-         
+                   <Image className="!object-cover"  src={"/images/main-slider/intro-3.webp"}  alt="background image" fill={true} priority={false} quality={80}/>
+
           <div className="absolute inset-0 bg-black opacity-40"></div>
           {/* // style={{ backgroundImage: 'url("/images/main-slider/intro-1.jpg")'}}
 

@@ -59,7 +59,7 @@ function page() {
           <AllHeadings
             title="our Leaders"
             description1="We Are"
-            description2=" Friendly & Profressional"
+            description2=" Friendly & Professional"
             y={-100}
           />
           {/* <div className="sec-title">

@@ -73,9 +73,9 @@ export default function HeaderComp() {
                 </div>
               </div>
 
-              <div className="nav-outer pull-left clearfix">
+              <div className="nav-outer pull-left lg:!pl-0 xl:!pl-24 clearfix">
                 {/* Main Menu */}
-                <nav className="main-menu navbar-expand-md">
+                <nav className="main-menu navbar-expand-md lg:ml-10 xl:ml-0">
                   <div className="navbar-header">
                     <button
                       className="navbar-toggler"
@@ -105,7 +105,7 @@ export default function HeaderComp() {
                           href={`${
                             pathname === '/about-us' ||
                             pathname === '/contact-us'||
-                            pathname === '/our-team'
+                            pathname === '/our-team' || pathname === '/services'
                               ? '/'
                               : '#what_we_do'
                           }`}
@@ -118,7 +118,7 @@ export default function HeaderComp() {
                           href={`${
                             pathname === '/about-us' ||
                             pathname === '/contact-us'||
-                            pathname === '/our-team'
+                            pathname === '/our-team' || pathname === '/services'
                               ? '/'
                               : '#where_we_operate'
                           }`}
