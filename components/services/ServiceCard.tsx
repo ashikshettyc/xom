@@ -71,7 +71,7 @@ function ServiceCard() {
                 <div className="col-12 col-xl-8 xl:py-6">
                   <Image
                     src={details.image}
-                    alt=""
+                    alt={details.id}
                     width={1080}
                     height={500}
                     priority={false}
