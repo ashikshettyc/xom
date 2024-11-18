@@ -34,7 +34,7 @@ export default function HeaderCarosel() {
 
           // data-bg-image="/images/main-slider/intro-1.webp"
         >
-          <Image className="!object-cover" src={"/images/main-slider/intro-2.webp"} alt="background image" fill={true} priority={true} quality={75}/>
+          <Image className="!object-cover" src={"/images/main-slider/intro-2.webp"} alt="background image" loading="lazy" fill  quality={75}/>
            <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="auto-container w-100">
             <div className="row clearfix">
@@ -70,7 +70,7 @@ export default function HeaderCarosel() {
           className="slide relative  md:pt-0 "
           // data-bg-image="/images/main-slider/intro-2.wen"
         >
-                   <Image className="!object-cover"  src={"/images/main-slider/intro-3.webp"}  alt="background image" fill={true} priority={false} quality={80}/>
+                   <Image className="!object-cover"  src={"/images/main-slider/intro-3.webp"} priority={true}  alt="background image" fill={true} quality={80}/>
 
           <div className="absolute inset-0 bg-black opacity-40"></div>
           {/* // style={{ backgroundImage: 'url("/images/main-slider/intro-1.jpg")'}}

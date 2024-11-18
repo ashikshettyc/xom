@@ -21,7 +21,7 @@ function AboutCard({ path, name, designation, duration, delay }: FounderType) {
       <div className="inner-box">
         <div className="image">
           <a>
-            <Image src={`${path}`} width={500} height={80} alt="" />
+            <Image src={`${path}`} width={500} height={500} quality={100} alt="" />
           </a>
           {/* <!-- Social Box --> */}
           {/* <ul className="social-box">

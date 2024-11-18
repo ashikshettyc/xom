@@ -55,7 +55,7 @@ function page() {
       </div>
       
       </div>
-      <div className="auto-container flex pb-5">
+      <div className="auto-container flex pb-5 lg:pt-0">
             <blockquote
               className="text-black text-sm py-7 px-9 bg-[#f7f7f7] "
               style={{ borderLeft: "4px solid #025652" }}

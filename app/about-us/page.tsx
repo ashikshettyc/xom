@@ -83,7 +83,7 @@ function page() {
               delay={0.8}
             />
             <AboutCard
-              path="/images/members/Lane.jpg"
+              path="/images/members/LaneLeader.webp"
               name="Lane Roberts"
               designation="Owner & Partner"
               duration={1.2}

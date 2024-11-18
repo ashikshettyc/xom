@@ -65,19 +65,20 @@ function ServiceCard() {
         </div>
 
         <div className="row clearfix">
-          <div className="content-side col-lg-9 col-md-12 col-sm-12  lg:h-[50vh]">
+          <div className="content-side col-lg-9 col-md-12 col-sm-12  lg:h-[20vh]">
             <div className="service-detail" key={details.id}>
               <div className="inner-box flex flex-col justify-center items-start xl:flex-row lg:gap-6">
-                <div className="col-12 col-xl-8 py-3">
+                <div className="col-12 col-xl-8 xl:py-6">
                   <Image
-                    src="/images/resource/service-1.jpg"
+                    src={details.image}
                     alt=""
-                    width={800}
-                    height={100}
+                    width={1080}
+                    height={500}
+                    priority={false}
                   />
                 </div>
                 <div className="lower-content pl-3">
-                  <h4 className="text-center">{details.service}</h4>
+                  <h4 className="text-center pt-3 lg:pt-0">{details.service}</h4>
                   <p className="text-base font-semibold">
                     {details.description}
                   </p>
@@ -93,7 +94,7 @@ function ServiceCard() {
                   <div
                     className={`category-boxed ${
                       details.id === data.id && "!bg-greenish !text-white"
-                    }`}
+                    } !p-5`}
                     key={data.id}
                     onClick={() => handleCard(data.id)}
                   >
